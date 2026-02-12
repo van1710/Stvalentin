@@ -32,13 +32,16 @@
         Non 🙄
     </button>
     
-    <div id="success" class="fixed inset-0 bg-black/80 flex flex-col justify-center items-center z-30 hidden px-4">
-        <img id="finalGif" src="media/misskalem-heart-25660_512.gif" alt="Succès !" class="w-48 h-48 sm:w-80 sm:h-80 mx-auto mb-6 hidden">
-        
-        <video id="finalVideo" class="w-48 h-48 sm:w-80 sm:h-80 mx-auto mb-6 hidden" autoplay loop muted playsinline></video>
-        
-        <h2 id="finalMessage" class="text-xl sm:text-2xl font-bold text-white text-center max-w-lg"></h2>
-    </div>
+   <div id="success" class="fixed inset-0 bg-black/80 flex flex-col justify-center items-center z-30 hidden px-4 py-8 overflow-y-auto">
+    <img id="finalGif" src="media/misskalem-heart-25660_512.gif" alt="Succès !" 
+         class="w-full max-w-[320px] h-auto mx-auto mb-6 hidden rounded-2xl shadow-2xl">
+    
+    <video id="finalVideo" 
+           class="w-full max-w-[350px] h-auto mx-auto mb-6 hidden rounded-3xl border-4 border-pink-400 shadow-2xl" 
+           autoplay loop playsinline></video>
+    
+    <h2 id="finalMessage" class="text-lg sm:text-2xl font-bold text-white text-center max-w-lg leading-relaxed px-2"></h2>
+</div>
 
     <audio id="bgMusic" src="media/poorartistt-zouk-amp-hypnosis-music-no-copyright-370486 (1).mp3" preload="auto"></audio>
 

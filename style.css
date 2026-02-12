@@ -9,13 +9,47 @@
   }
 }
 
-/* On peut ajouter des styles spécifiques ici si besoin */
+/* --- STYLES GÉNÉRAUX --- */
 #oui, #non {
-    min-width: 120px;
+    min-width: 100px; /* Réduit pour mobile par défaut */
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
+/* --- AJUSTEMENT POUR MOBILE  --- */
+@media (max-width: 767px) {
+    #dynamicTitle {
+        font-size: 1.2rem; /* Évite que le texte soit trop gros */
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+
+    #oui {
+        /* Limite l'agrandissement pour ne pas couvrir tout l'écran */
+        max-width: 180px; 
+    }
+
+    /* Ajuste la taille des vidéos et GIFs pour mobile */
+    #finalVideo, #finalGif {
+        width: 90% !important;
+        height: auto !important;
+    }
+
+    #finalMessage {
+        font-size: 1.05rem;
+        max-height: 40vh;
+        overflow-y: auto; /* Permet de lire les longs messages sur petit écran */
+    }
+}
+
+/* --- AJUSTEMENT POUR ORDINATEUR  --- */
 @media (min-width: 768px) {
     #oui, #non {
         min-width: 140px;
     }
+    
+    #dynamicTitle {
+        font-size: 2rem;
+    }
 }
+
