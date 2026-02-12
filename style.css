@@ -1,0 +1,21 @@
+/* Configuration des animations personnalisées */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer theme {
+  .animate-pulse-fast {
+    animation: pulse 1s infinite;
+  }
+}
+
+/* On peut ajouter des styles spécifiques ici si besoin */
+#oui, #non {
+    min-width: 120px;
+}
+
+@media (min-width: 768px) {
+    #oui, #non {
+        min-width: 140px;
+    }
+}
