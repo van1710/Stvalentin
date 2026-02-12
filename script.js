@@ -63,11 +63,13 @@ function startValentine() {
 
 // 2. FONCTIONS UTILITAIRES
 function positionButtons() {
-    // On descend les boutons à 70% de la hauteur de l'écran pour laisser respirer le titre
-    ouiBtn.style.top = '70%'; 
-    nonBtn.style.top = '70%';
-    ouiBtn.style.left = 'calc(50% - 140px)';
-    nonBtn.style.left = 'calc(50% + 20px)';
+    // Au lieu de 'fixed' et 'top: 70%', on les laisse en position relative ou static
+    ouiBtn.style.position = 'relative';
+    nonBtn.style.position = 'relative';
+    ouiBtn.style.top = 'auto';
+    nonBtn.style.top = 'auto';
+    ouiBtn.style.left = 'auto';
+    nonBtn.style.left = 'auto';
 }
 
 function moveNonButton() {

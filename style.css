@@ -14,8 +14,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    overflow-x: hidden;
+   
+}
+
+/* On peut aussi donner une marge automatique à la div espaceur */
+.spacer {
+    flex-grow: 1;
+    max-height: 100px;
 }
 
 /* --- LA QUESTION (TITRE) --- */

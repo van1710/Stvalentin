@@ -20,17 +20,21 @@
         </div>
     </div>
     
-    <h1 id="dynamicTitle" class="text-black font-bold mb-8 animate-pulse hidden text-center px-4">
-    <span id="nameDisplay"></span>, veux-tu être mon Valentin ? 🥹👉🏾👈🏾
-</h1>
+    <h1 id="dynamicTitle" class="text-black font-bold mb-4 animate-pulse hidden text-center px-4 z-10">
+        <span id="nameDisplay"></span>, veux-tu être mon Valentin ? 🥹👉🏾👈🏾
+    </h1>
 
-    <button id="oui" class="fixed px-6 py-4 text-lg font-bold bg-gradient-to-r from-pink-400 to-rose-400 text-white rounded-full shadow-2xl transition-all z-20 hidden">
-        Oui 😍
-    </button>
-    
-    <button id="non" class="fixed px-6 py-4 text-lg font-bold bg-gray-200 text-gray-800 rounded-full shadow-xl transition-all z-10 hidden">
-        Non 🙄
-    </button>
+    <div id="spacer" class="h-24 sm:h-32 hidden"></div>
+
+    <div class="flex gap-4 items-center justify-center z-20">
+        <button id="oui" class="px-6 py-4 text-lg font-bold bg-gradient-to-r from-pink-400 to-rose-400 text-white rounded-full shadow-2xl transition-all hidden">
+            Oui 😍
+        </button>
+        
+        <button id="non" class="px-6 py-4 text-lg font-bold bg-gray-200 text-gray-800 rounded-full shadow-xl transition-all hidden">
+            Non 🙄
+        </button>
+    </div>
     
    <div id="success" class="fixed inset-0 bg-black/80 flex flex-col justify-center items-center z-30 hidden px-4 py-8 overflow-y-auto">
     <img id="finalGif" src="media/misskalem-heart-25660_512.gif" alt="Succès !" 
