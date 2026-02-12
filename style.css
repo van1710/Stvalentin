@@ -1,4 +1,3 @@
-/* Configuration des animations personnalisées */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,47 +8,64 @@
   }
 }
 
-/* --- STYLES GÉNÉRAUX --- */
+/* --- STRUCTURE GÉNÉRALE --- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- LA QUESTION (TITRE) --- */
+#dynamicTitle {
+    margin-bottom: 5rem !important; /* Crée l'espace entre la question et les boutons */
+    transition: all 0.3s ease;
+}
+
+/* --- LES BOUTONS --- */
 #oui, #non {
-    min-width: 100px; /* Réduit pour mobile par défaut */
+    min-width: 120px;
     transition: all 0.3s ease;
     z-index: 10;
 }
 
-/* --- AJUSTEMENT POUR MOBILE  --- */
+/* --- ADAPTATION MOBILE (Écrans < 768px) --- */
 @media (max-width: 767px) {
     #dynamicTitle {
-        font-size: 1.2rem; /* Évite que le texte soit trop gros */
-        padding: 0 15px;
-        line-height: 1.4;
+        font-size: 1.3rem; /* Taille lisible sans déborder */
+        margin-bottom: 3.5rem !important;
+        padding: 0 20px;
     }
 
     #oui {
-        /* Limite l'agrandissement pour ne pas couvrir tout l'écran */
-        max-width: 180px; 
+        max-width: 160px; /* Empêche le bouton de devenir géant */
     }
 
-    /* Ajuste la taille des vidéos et GIFs pour mobile */
+    /* Gestion de l'écran final pour éviter que la vidéo cache le texte */
     #finalVideo, #finalGif {
         width: 90% !important;
+        max-height: 35vh !important; /* La vidéo prend max 35% de la hauteur */
         height: auto !important;
+        object-fit: contain;
+        margin-bottom: 1rem;
     }
 
     #finalMessage {
         font-size: 1.05rem;
-        max-height: 40vh;
-        overflow-y: auto; /* Permet de lire les longs messages sur petit écran */
+        max-height: 45vh; /* Le reste de la place est pour le texte */
+        overflow-y: auto; /* Scroll si le texte est long */
+        padding: 10px;
     }
 }
 
-/* --- AJUSTEMENT POUR ORDINATEUR  --- */
+/* --- ADAPTATION ORDINATEUR --- */
 @media (min-width: 768px) {
-    #oui, #non {
-        min-width: 140px;
-    }
-    
     #dynamicTitle {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    #finalMessage {
+        font-size: 1.5rem;
     }
 }
-

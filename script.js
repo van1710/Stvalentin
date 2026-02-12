@@ -63,12 +63,11 @@ function startValentine() {
 
 // 2. FONCTIONS UTILITAIRES
 function positionButtons() {
-    const isMobile = window.innerWidth < 768;
-    const spacing = isMobile ? 10 : 20;
-    ouiBtn.style.left = `calc(50% - ${130 + spacing}px)`;
-    ouiBtn.style.top = 'calc(50% + 30px)';
-    nonBtn.style.left = `calc(50% + ${spacing}px)`;
-    nonBtn.style.top = 'calc(50% + 30px)';
+    // On descend les boutons à 70% de la hauteur de l'écran pour laisser respirer le titre
+    ouiBtn.style.top = '70%'; 
+    nonBtn.style.top = '70%';
+    ouiBtn.style.left = 'calc(50% - 140px)';
+    nonBtn.style.left = 'calc(50% + 20px)';
 }
 
 function moveNonButton() {
@@ -84,7 +83,7 @@ function moveNonButton() {
 
 function growOuiButton() {
     const currentScale = parseFloat(ouiBtn.getAttribute('data-scale') || 1);
-    if (currentScale < 3) {
+    if (currentScale < 2) {
         const newScale = currentScale + 0.2;
         ouiBtn.setAttribute('data-scale', newScale);
         ouiBtn.style.transform = `scale(${newScale})`;
@@ -126,6 +125,9 @@ ouiBtn.addEventListener('click', () => {
                 finalVideo.src = `media/${perso.gif}`;
                 finalVideo.classList.remove('hidden');
                 finalVideo.style.width = "500%";      
+            finalVideo.style.maxWidth = "250px";   
+            finalVideo.style.height = "400px";
+            finalVideo.style.marginBottom = "20px"; 
             
                 finalVideo.play();
 
