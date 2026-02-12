@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veux-tu être mon Valentin ? 💕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-pink-300 flex flex-col justify-center items-center text-white font-sans p-4">
+    
+    <div id="namePopup" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+        <div class="bg-white/95 backdrop-blur-xl rounded-3xl p-6 max-w-sm w-11/12 text-center shadow-2xl animate-pulse">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Surprise !!!🙃</h2>
+            <input type="text" id="userName" placeholder="Ton prénom s'il te plaît..." 
+                   class="w-full px-4 py-3 text-gray-800 border-2 border-pink-200 rounded-2xl focus:border-pink-400 focus:outline-none text-center font-semibold mb-4 bg-white shadow-inner">
+            <button onclick="startValentine()" class="px-6 py-3 bg-gradient-to-r from-pink-400 to-rose-400 text-white rounded-2xl font-bold hover:scale-105 transition-all">
+                C'est parti !
+            </button>
+        </div>
+    </div>
+    
+    <h1 id="dynamicTitle" class="text-2xl sm:text-4xl text-black font-bold mb-8 animate-pulse hidden text-center px-4">
+        <span id="nameDisplay"></span>, veux-tu être mon Valentin ?🥹👉🏾👈🏾
+    </h1>
+    
+    <button id="oui" class="fixed px-6 py-4 text-lg font-bold bg-gradient-to-r from-pink-400 to-rose-400 text-white rounded-full shadow-2xl transition-all z-20 hidden">
+        Oui 😍
+    </button>
+    
+    <button id="non" class="fixed px-6 py-4 text-lg font-bold bg-gray-200 text-gray-800 rounded-full shadow-xl transition-all z-10 hidden">
+        Non 🙄
+    </button>
+    
+    <div id="success" class="fixed inset-0 bg-black/80 flex flex-col justify-center items-center z-30 hidden px-4">
+        <img id="finalGif" src="media/misskalem-heart-25660_512.gif" alt="Succès !" class="w-48 h-48 sm:w-80 sm:h-80 mx-auto mb-6 hidden">
+        
+        <video id="finalVideo" class="w-48 h-48 sm:w-80 sm:h-80 mx-auto mb-6 hidden" autoplay loop muted playsinline></video>
+        
+        <h2 id="finalMessage" class="text-xl sm:text-2xl font-bold text-white text-center max-w-lg"></h2>
+    </div>
+
+    <audio id="bgMusic" src="media/poorartistt-zouk-amp-hypnosis-music-no-copyright-370486 (1).mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
