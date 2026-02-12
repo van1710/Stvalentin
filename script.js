@@ -126,9 +126,6 @@ ouiBtn.addEventListener('click', () => {
                 finalVideo.src = `media/${perso.gif}`;
                 finalVideo.classList.remove('hidden');
                 finalVideo.style.width = "500%";      
-            finalVideo.style.maxWidth = "350px";   
-            finalVideo.style.height = "500px";
-            finalVideo.style.marginBottom = "20px"; 
             
                 finalVideo.play();
 
